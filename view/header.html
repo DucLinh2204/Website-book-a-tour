@@ -1,0 +1,70 @@
+<header >
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#!"><img class="logo" src="public/img/logo.png" alt=""></a>
+        <div class="d-flex">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-regular fa-circle-user"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#!login">Đăng Nhập</a></li>
+              <li><a class="dropdown-item" href="#!signin">Đăng Ký</a></li>
+              <li><a class="dropdown-item" href="#!user">Thông tin tài khoản</a></li>
+              <li><a class="dropdown-item" href="#!cart">Giỏ Hàng</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Quên Tài Khoản</a></li>
+              <li><a class="dropdown-item" href="#!login" ng-click="logout()">Đăng xuất</a></li>
+            </ul>
+          </div>
+          <form class="search-header" role="search">
+            <div class="search-container">
+                <input class="form-control me-2" type="search" placeholder="Tuor du lịch giá rẻ" aria-label="Search" ng-model="keyword">
+                <button class="btn btn-outline-success bg-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+        </div>
+      </div>
+    </nav>
+    <hr class="dropdown-divider" style="margin-top: -29px; padding: 10px;">
+    <div class="container">
+      <nav class="row header-row">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-4 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#!"><i class="fa-solid fa-house text-success"></i>Trang Chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#!tour"><i class="fa-solid fa-ticket text-success"></i>Đặt Tour</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#!contact"><i class="fa-solid fa-phone text-success"></i>Liên Hệ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#!faq"><i class="fa-solid fa-envelope text-success"></i>Góp Ý</a>
+                </li>
+              </ul>
+              <div class="d-flex" role="search">
+                <input class="btn" type="submit" value="English">
+                <input class="btn" type="submit" value="Tiếng Việt">
+              </div>
+            </div>
+          </div>
+        </nav>
+      </nav>
+    </div>
+  </header>
+  <div class="card text-bg-dark" ng-if="header1">
+    <img src="public/img/banner.png"  class="card-img img-flux rounded-0 object-fit-cover" style="max-height: 700px;" alt="">
+    <div class="card-img-overlay bg-opacity-25 align-items-center justify-content-center d-flex">
+      <div class="fw-bolder text-center">
+        <p class="card-text display-6 fs-1">Dịch vụ</p>
+        <h1 class="card-title display-1 fw-bolder">Du Lịch Việt Nam</h1>
+      </div>
+    </div>
+  </div>

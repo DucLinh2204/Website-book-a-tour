@@ -1,0 +1,182 @@
+<main>
+  <div class="bg-success py-1"></div>
+  <div class="container">
+    <div class="contact-form m-auto py-5">
+      <div class="row py-2">
+        <h1 class="text-center"><strong>{{sp.name_pro}}</strong></h1>
+        <hr>
+        <div class="col-md-6">
+          <div class="py-2">
+              <img ng-src="{{sp.img_pro}}" width="600px" alt="" class="img-fluid rounded my-auto d-block">           
+          </div>
+          
+          
+        </div>
+        <div class="col-md-6">
+          
+          <div class=" m-1 text-lg">
+            <h3><strong>Giới thiệu:</strong></h3>
+            <p>{{sp.title}}</p>
+            <p>{{sp.title1}}</p>
+
+          </div>
+          <div class="price " style="display: flex;">
+            <h3><strong>Giá tour:</strong></h3>
+            <p class="text-success text-center py-2" style="font-size: 24px;"> {{sp.price}}/người</p>
+          </div>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-outline-success btn-lg py-2 " data-bs-toggle="modal" data-bs-target="#exampleModal" ng-click="mua(sp)">
+            Đặt tour ngay
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content p-2">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel"><strong>Đặt Tour</strong></h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form class="needs-validation" novalidate>
+                  <div class="modal-body">
+                      <div class="mb-3">
+                          <label for="name">Họ và tên:</label>
+                          <input type="text" class="form-control" id="name" ng-model="name" placeholder="Nhập họ và tên" required>
+                          <div class="invalid-feedback">Vui lòng nhập họ và tên</div>
+                      </div>
+                      <div class="mb-3">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control" id="email" placeholder="Nhập email" required>
+                          <div class="invalid-feedback">Vui lòng nhập địa chỉ email hợp lệ.</div>
+                      </div>
+                      <div class="mb-3">
+                          <label for="phone">Số điện thoại:</label>
+                          <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại" required>
+                          <div class="invalid-feedback">Vui lòng nhập số điện thoại hợp lệ.</div>
+                      </div>
+                      <div class="mb-3">
+                          <label for="number">Số lượng người:</label>
+                          <input type="number" class="form-control" id="number" placeholder="Nhập số lượng người" required>
+                          <div class="invalid-feedback">Vui lòng nhập số lượng người.</div>
+                      </div>
+                      <div class="mb-3">
+                          <label for="date">Đặt ngày:</label>
+                          <input type="date" class="form-control" id="date" required>
+                          <div class="invalid-feedback">Vui lòng chọn ngày đặt.</div>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                      <button type="submit" class="btn btn-outline-success" onclick="validateForm()">Đặt</button>
+                  </div>
+              </form>
+              
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="row py-2">
+      <hr>
+      <div class="col-md-6">
+        <h3><strong>Những điều cần biết trước khi bạn đi:</strong></h3>
+        <p class="card-text">{{sp.note}}</p>
+      </div>
+      <div class="col-md-6">
+        <h3><strong>Đến đó bằng cách nào:</strong></h3>
+        <p class="card-text">{{sp.title2}}</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="bg-success">
+    <div  class="container text-center text-light pt-5 p-md-5 text-xxl-center">
+      <h4>Sử dụng Đặt trước & Thanh toán sau để đảm bảo các hoạt động bạn không muốn bỏ lỡ mà không bị khóa.</h4>
+    </div>
+  </div>
+  <div class="container mt-5 p"> 
+    <h2 class="text-center">Điểm tham quan hàng đầu</h2>
+    <div class="row">
+
+      <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="public/img/bienvungtau.jpg" class="img-fluid rounded" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body pt-0">
+              <h5 class="card-title">Bãi Biển Vũng Tàu</h5>
+              <p class="card-text">Là một trong những bãi biển đẹp nhất Việt Nam với những bãi cát trắng mịn, thẳng tắp.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="public/img/hanoi.jpg" class="img-fluid rounded" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body pt-0">
+              <h5 class="card-title">Thủ Đô Hà Nội</h5>
+              <p class="card-text">Hà Nội là thủ đô nghệ thuật của Việt Nam. Bảo tàng Mỹ thuật lưu giữ bộ sưu tập hàng đầu của đất nước.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="public/img/daolyson.jpg" class="img-fluid rounded" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body pt-0">
+              <h5 class="card-title">Đảo Lý Sơn</h5>
+              <p class="card-text">Đây là hòn đảo hiếm hoi vẫn giữ được vẻ đẹp hoang sơ.Những ghềnh đá và bãi tắm trong veo đến tận đáy biển</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="public/img/ninhbinh.jpg" class="img-fluid rounded" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body pt-0">
+              <h5 class="card-title">Ninh Bình</h5>
+              <p class="card-text">Ninh Bình có địa hình rất đa dạng: có núi, đồng bằng, vùng ven biển mang đầy đủ sắc thái của nước Việt Nam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="public/img/thuathienhue.jpg" class="img-fluid rounded" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body pt-0">
+              <h5 class="card-title">Thừa Thiên Huế</h5>
+              <p class="card-text">Trung tâm văn hoá đặc sắc của cả nước. Vùng đất văn hiến, có bề dày lịch sử, văn hoá và truyền thống.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+        <div class="row g-0">
+          <div class="col-4">
+            <img src="public/img/nhatrang.jpg" class="img-fluid rounded" alt="...">
+          </div>
+          <div class="col-8">
+            <div class="card-body pt-0">
+              <h5 class="card-title">Bãi Biển Nha Trang</h5>
+              <p class="card-text">Nha Trang được ví như 'Hòn ngọc Biển Đông' khi sở hữu bãi cát vàng hay dòng nước xanh trong vắt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+

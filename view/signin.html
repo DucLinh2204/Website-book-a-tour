@@ -1,0 +1,50 @@
+
+
+  <main>
+    <div class="container">
+        <div class="form-group">
+            <div class="img-bg">
+                <h2 class="text-center m-5">Đăng Nhập</h2>
+                <img src="public/img/Banner1.png">
+            </div>
+            <form class="needs-validation login" novalidate>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email</label>
+                  <div class="input-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" required >
+                    <div class="invalid-feedback">
+                      Vui lòng nhập địa chỉ email hợp lệ.
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Mật Khẩu</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" required>
+                    <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="hoten" class="form-label">Họ Và Tên</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="hoten" required>
+                    <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="sdt" class="form-label">Số Điện Thoại</label>
+                  <div class="input-group">
+                    <input type="number" class="form-control" id="sdt" required>
+                    <div class="invalid-feedback">Vui lòng nhập số điện thoại.</div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success" onclick="validateForm()">
+                  Đăng Ký
+                </button>
+    
+                <a href="#!login" class="btn btn-outline-success mt-2">Đăng Nhập</a>
+              </form>
+        </div>
+    </div>
+  </main>
+  

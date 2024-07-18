@@ -1,0 +1,43 @@
+
+  <main class="py-5" style="height: 600px;">
+    <div class="container">
+      <div class="card">
+        <h2 class="card-header text-center text-bg-success py-3">Giỏ hàng của bạn</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered text-center m-0 table-hover">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Tên tour</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+                <th>Tổng tiền</th>
+                <th>Xóa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="sp in cart">
+                <td>{{$index+1}}</td>
+                <td>{{sp.name_pro}}</td>
+                <td>{{sp.quantity}}</td>
+                <td>{{sp.price}} VNĐ/Người</td>
+                <td>{{sp.price*sp.quantity}} VNĐ</td>
+                <td><button class="btn btn-sm btn-outline-danger" ng-click="xoa()">Xóa</button></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="4">Tổng cộng</th>
+                <th colspan="2">{{tongtien()}} VNĐ</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="text ">
+        <a href="#!tour" class="text-bg-success text-decoration-none p-2 rounded">Tiếp tục đặt Tour</a>
+        <a href="#" class="text-bg-success text-end text-decoration-none p-2 rounded">Thanh toán</a>
+      </div>
+    </div>
+  </main>
+

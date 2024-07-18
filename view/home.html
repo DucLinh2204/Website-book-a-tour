@@ -1,0 +1,179 @@
+<main>
+    <div class="container mt-5">
+      <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <h2 class="section-title ff-secondary text-center fw-normal">Tại sao nên đặt <strong>Tour</strong> tại <strong class="text-success">Mint</strong>?</h2>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-user-tie text-success mb-4"></i>
+                            <h5>Nhân Viên Thân Thiện</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-solid fa-money-bill text-success mb-4"></i>
+                            <h5>Đặt trước, huỷ miễn phí</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-cart-plus text-success mb-4"></i>
+                            <h5>Thanh Toán An Toàn</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="service-item rounded pt-3">
+                        <div class="p-4">
+                            <i class="fa fa-3x fa-headset text-success mb-4"></i>
+                            <h5>Dịch Vụ 24/7</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+      <h2 class="text-center">Điểm du lịch ấn tượng</h2>
+      <div class="row">
+          <div class="col-md-4" ng-repeat="sp in dsSP | limitTo: 6">
+              <div class="card shadow border-0 hover-trigger">
+                 
+                  <div class="position-relative">
+                      <div class="badge-top">#{{sp.id}}</div>
+                      <img ng-src="{{sp.img_pro}}" class="card-img-top" alt="...">
+                      <a href="#!detail/{{sp.id}}" class="btn hover-show btn-light rounded-pill position-absolute end-0 me-3 mb-3 bottom-0"><i class="fa-regular fa-eye"></i>Chi tiết</a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{sp.name_pro}}</h5>
+                    <div class="text-warning">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <span class="text-dark">43,980</span>
+                    </div>
+                    <p class="card-text">{{sp.description_short}}
+                      <a href="#" class="xemthem-link" data-bs-toggle="modal" data-bs-target="#xemthem{{sp.id}}">Xem thêm</a>
+                    </p>
+
+                            <!-- Modal -->
+                          <div class="modal fade" id="xemthem{{sp.id}}" tabindex="-1" aria-labelledby="xemthemLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg">
+                              <div class="modal-content p-3">
+                                  <div class="modal-header border-0">
+                                  <h1 class="modal-title fs-3" id="xemthemLabel">{{sp.name_pro}}</h1>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    {{sp.description_long}}
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="bg-success">
+      <div  class="container text-center text-light pt-5 p-md-5 text-xxl-center">
+        <h3>Giữ mọi thứ linh hoạt</h3>
+        <h5>Sử dụng Đặt trước & Thanh toán sau để đảm bảo các hoạt động bạn không muốn bỏ lỡ mà không bị khóa.</h5>
+      </div>
+    </div>
+    <div class="container mt-5 p"> 
+      <h2 class="text-center">Điểm tham quan hàng đầu</h2>
+      <div class="row">
+
+        <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="public/img/bienvungtau.jpg" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body pt-0">
+                <h5 class="card-title">Bãi Biển Vũng Tàu</h5>
+                <p class="card-text">Là một trong những bãi biển đẹp nhất Việt Nam với những bãi cát trắng mịn, thẳng tắp.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="public/img/hanoi.jpg" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body pt-0">
+                <h5 class="card-title">Thủ Đô Hà Nội</h5>
+                <p class="card-text">Hà Nội là thủ đô nghệ thuật của Việt Nam. Bảo tàng Mỹ thuật lưu giữ bộ sưu tập hàng đầu của đất nước.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="public/img/daolyson.jpg" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body pt-0">
+                <h5 class="card-title">Đảo Lý Sơn</h5>
+                <p class="card-text">Đây là hòn đảo hiếm hoi vẫn giữ được vẻ đẹp hoang sơ.Những ghềnh đá và bãi tắm trong veo đến tận đáy biển</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="public/img/ninhbinh.jpg" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body pt-0">
+                <h5 class="card-title">Ninh Bình</h5>
+                <p class="card-text">Ninh Bình có địa hình rất đa dạng: có núi, đồng bằng, vùng ven biển mang đầy đủ sắc thái của nước Việt Nam.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="public/img/thuathienhue.jpg" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body pt-0">
+                <h5 class="card-title">Thừa Thiên Huế</h5>
+                <p class="card-text">Trung tâm văn hoá đặc sắc của cả nước. Vùng đất văn hiến, có bề dày lịch sử, văn hoá và truyền thống.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mb-3 border-0 shadow py-3 m-4" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-4">
+              <img src="public/img/nhatrang.jpg" class="img-fluid rounded" alt="...">
+            </div>
+            <div class="col-8">
+              <div class="card-body pt-0">
+                <h5 class="card-title">Bãi Biển Nha Trang</h5>
+                <p class="card-text">Nha Trang được ví như 'Hòn ngọc Biển Đông' khi sở hữu bãi cát vàng hay dòng nước xanh trong vắt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>

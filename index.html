@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body ng-app="myapp" >
+  <div ng-controller="myctrl">
+    <div ng-include="'view/header.html'"></div>
+    <div ng-show="loading" class="pull-right label label-info">Loading...</div>
+    <div ng-view=""></div>
+    <div ng-include="'view/footer.html'"></div>
+  </div>
+  <script src="public/js/bootstrap.bundle.min.js"></script>
+  <script src="public/js/angular.min.js"></script>
+  <script src="public/js/angular-route.min.js"></script>
+  <script src="controller/controller.js"></script>
+  <script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+      'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      const forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+    
+          form.classList.add('was-validated')
+        }, false)
+      })
+    })()
+    function validateForm() {
+        var form = document.querySelector('.needs-validation');
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+    }</script>
+  <script src="https://kit.fontawesome.com/592deca63b.js" crossorigin="anonymous"></script>
+</body>
+</html>

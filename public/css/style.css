@@ -1,0 +1,271 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333;
+}
+
+.logo {
+    width: 150px;
+    margin-left: 250px;
+}
+
+.search-header {
+    margin-right: 250px;
+}
+
+header {
+    max-height: 350px;
+    margin-top: -30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header-row{
+    margin-top: -30px;
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown button i {
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #009444;
+    color: #fff;
+    width: auto;
+}
+
+
+
+.dropdown-toggle::after {
+    content: none; 
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #f8f9fa;
+    color: #212529;
+    text-decoration: none;
+}
+
+.dropdown-divider {
+    margin: 0.5rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.search-header {
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-header input[type="search"] {
+    width: 350px;
+    padding: 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    outline: none;
+    padding-right: 70px; /* Tạo chỗ cho nút search */
+}
+
+.search-header button[type="submit"] {
+    background-color: #4CAF50;
+    margin-right: 20px;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    padding: 13px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.search-header button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+.hover-show{
+    display: none;
+}
+
+.hover-trigger:hover .hover-show{
+    display: block;
+}
+
+.badge-top{
+    background-color: #ea0202;
+    color: white;
+    padding: 13px 5px;
+    width: 50px;
+    text-align: center;
+    font-weight: 900;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    left: 20px;
+    top: 0;
+
+}
+
+.badge-top::after{
+    content: "";
+    border-color: #19121200  #ea0202;
+    border-width: 0 25px 15px 25px;
+    border-style: solid;
+    display: block;
+    width: 50px;
+    left: 0;
+    position: absolute;
+    bottom: -15px;
+}
+
+.position-relative img{
+    height: 277px;
+}
+
+.card{
+    margin-bottom: 20px;
+}
+
+.xemthem-link {
+    color: #424242; 
+    text-decoration: none; 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.xemthem-link:hover {
+    color: #009444; 
+}
+
+
+.xemthem-link:active {
+    color: #009444; 
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+}
+
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.form-group {
+    position: relative;
+}
+
+.img-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-bg h2 {
+    position: absolute;
+    top: 10%;
+    left: 48%;
+    font-size: 50px;
+    font-weight: 600;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 1; 
+}
+
+.img-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-group > * {
+    margin-bottom: 20px;
+}
+
+.form-group .input-group {
+    position: relative;
+}
+
+.form-group .input-group-text {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    padding-left: 30px;
+}
+
+.form-group button[type="submit"],
+.form-group a{
+    width: 100%;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: green;
+    background-color: var(--bs-nav-tabs-link-active-bg);
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    color: rgb(0, 0, 0);
+    background-color: var(--bs-nav-tabs-link-active-bg);
+}
+

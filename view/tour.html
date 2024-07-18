@@ -1,0 +1,77 @@
+  <main>
+    <div class="container">
+      <h2 class="text-center">Tour Du Lịch</h2>
+      <div class="row">
+
+        <div class="col-md-10">
+          <div class="row">
+            <div class="col-md-4" ng-repeat="sp in dsSP | filter: keyword">
+                <div class="card shadow border-0 hover-trigger">
+                   
+                    <div class="position-relative">
+                        <div class="badge-top">#{{sp.id}}</div>
+                        <img ng-src="{{sp.img_pro}}" class="card-img-top" alt="...">
+                        <a href="#!detail/{{sp.id}}" class="btn hover-show btn-light rounded-pill position-absolute end-0 me-3 mb-3 bottom-0"><i class="fa-regular fa-eye"></i>Chi tiết</a>
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">{{sp.name_pro}}</h5>
+                      <div class="text-warning">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="text-dark">{{sp.view}}</span>
+                      </div>
+                      <p class="card-text">{{sp.description_short}}
+                        <a href="#" class="xemthem-link" data-bs-toggle="modal" data-bs-target="#xemthem{{sp.id}}">Xem thêm</a>
+                      </p>
+    
+                              <!-- Modal -->
+                            <div class="modal fade" id="xemthem{{sp.id}}" tabindex="-1" aria-labelledby="xemthemLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-3">
+                                    <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-3" id="xemthemLabel">{{sp.name_pro}}</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      {{sp.description_long}}
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="panel panel-default">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <strong>Tuor theo miền</strong>
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <div class="list-group">
+                          <a href="#!category/Nam" class="list-group-item">Miền Nam</a>
+                          <a href="#!category/Trung" class="list-group-item">Miền Trung</a>
+                          <a href="#!category/Bắc" class="list-group-item">Miền Bắc</a>    
+                                                 
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </main>
+ 

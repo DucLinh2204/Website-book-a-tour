@@ -1,0 +1,46 @@
+
+<main>
+    <div class="container">
+      <div class="contact-form m-auto py-5">
+        <h2 class="text-center">Góp ý với chúng tôi</h2>
+        <div class="card py-4 m-1">
+          <form action="" name="contactForm" class="row g-3 p-3">  
+            <div class="col-md-6">
+            <label for="name" class="form-label">Họ và tên:</label>  
+            <input type="text" class="form-control" id="name" placeholder="Nhập họ và tên của bạn" required>  
+          </div>
+        
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Nhập email của bạn" required>
+          </div>
+        
+          <div class="col-md-6">
+            <label for="phone" class="form-label">Số điện thoại:</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Nhập số điện thoại của bạn" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">  </div>
+        
+          <div class="col-md-6">
+            <label for="subject" class="form-label">Chủ đề:</label>
+            <select class="form-select" id="subject" required>  <option value="">Chọn chủ đề</option>
+              <option value="1">Đặt tour du lịch</option>
+              <option value="2">Hỏi đáp về tour du lịch</option>
+              <option value="3">Phản hồi về dịch vụ</option>
+            </select>
+          </div>
+        
+          <div class="col-md-12">
+            <label for="message" class="form-label">Nội dung:</label>
+            <textarea class="form-control" id="message" rows="5" required></textarea>
+          </div>
+        
+          <div class="col-md-12 text-center">  
+            <button type="submit" class="btn btn-success btn-lg py-2 m-1">Gửi góp ý</button>
+          </div>
+        
+        </form>
+    
+        </div>
+      </div>
+    </div>
+  </main>
+

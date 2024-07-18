@@ -1,0 +1,116 @@
+
+    <main ng-repeat="user in users |limitTo:1">
+      
+        <div class="container py-5" style="height: 600px;">
+          <h1 class="text-center">Tài khoản</h1>
+          <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item active">
+              <a href="#user" class="nav-link active " data-bs-toggle="tab" role="tab">
+                <i class="fa-solid fa-user-edit"></i> Thông tin tài khoản
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#history" class="nav-link" data-bs-toggle="tab" role="tab">
+                <i class="fa-solid fa-calendar-check"></i> Lịch sử
+              </a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="user">
+              <div class="card"> <div class="card-header">
+                  <h4 class="card-title">
+                    <i class="fa-solid fa-user-edit"></i> Thông tin tài khoản
+                  </h4>
+                </div>
+                <div class="card-body">
+                  <form action="#">
+                    <div class="mb-3"> 
+                      <label for="name">Tên:</label>
+                      <input type="text" class="form-control" id="name" name="name" value="{{user.name}}">
+                    </div>
+                    <div class="mb-3">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" id="email" name="email" value="{{user.email}}">
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone">Số điện thoại:</label>
+                      <input type="text" class="form-control" id="phone" name="phone" value="{{user.sdt}}">
+                    </div>
+                    <div class="mb-3">
+                      <label for="adress">Địa chỉ:</label>
+                      <input type="text" class="form-control" id="adress" name="adress" value="Quận 12, TP HCM">
+                    </div>
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Thay đổi mật khẩu
+                    </button>
+                  </form>
+                </div>
+              </div>
+      
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Thay đổi mật khẩu</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="needs-validation" novalidate>
+                        <div class="mb-3">
+                          <label for="password">Mật khẩu hiện tại:</label>
+                          <input type="password" class="form-control" id="password" name="password" required>
+                          <div class="invalid-feedback">Vui lòng nhập mật khẩu.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="new-password">Mật khẩu mới:</label>
+                          <input type="password" class="form-control" id="new-password" name="new-password" required>
+                          <div class="invalid-feedback">Vui lòng nhập mật khẩu mới.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="confirm-password">Xác nhận mật khẩu mới:</label>
+                          <input type="password" class="form-control" id="confirm-password" name="confirm-password" required>
+                          <div class="invalid-feedback">Vui lòng xác nhận mật khẩu mới.</div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                      <button type="submit" class="btn btn-success" onclick="validateForm()">Lưu</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="history">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title">
+                      <i class="fa-solid fa-bars"></i> Lịch sử đặt tour
+                    </h4>
+                  </div>
+                  <div class="card-body">
+                    <table class="table table-bordered table-striped text-center m-0 table-hover">
+                      <thead class="align-middle">
+                          <tr>
+                              <th>Tên tour</th>
+                              <th>Ngày khởi hành</th>
+                              <th>Giá tiền</th>
+                              <th>Trạng thái</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat="tour in user.tour">
+                              <td>{{tour.nametour}}</td>
+                              <td>{{tour.date}}</td>
+                              <td>{{tour.price}}</td>
+                              <td class="text-dark">{{tour.status}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+      </main>
+
